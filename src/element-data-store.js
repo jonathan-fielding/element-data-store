@@ -58,7 +58,7 @@
                 this.dict[elementId] = {};
             }
 
-            return this.dict[elementId];
+            return this.dict[elementId] || {};
         }
     };
 

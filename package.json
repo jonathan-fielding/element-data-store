@@ -1,6 +1,6 @@
 {
   "name": "element-data-store",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Simple library that provides an api to stores data for an element (similar to $.data in jQuery)",
   "main": "src/element-data-store.js",
   "scripts": {
