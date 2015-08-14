@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>QUnit - ElementDataStore</title>
+        <link rel="stylesheet" href="resources/qunit.css">
+        <script src="../src/element-data-store.js" data-cover></script>
+    </head>
+    <body>
+        <div id="qunit"></div>
+        <div id="qunit-fixture"></div>
+
+        <div class="element1"></div>
+        <div class="element2"></div>
+        <div class="element3"></div>
+
+        <script src="resources/qunit.js"></script>
+        <script src="resources/blanket.min.js"></script>
+        <script>
+            test("Attach string to element 1", function() {
+                var element = document.querySelector('.element1');
+                elementDataStore.set(element, 'testKey', 'testVal');
+
+                var fetchedValue = elementDataStore.get(element, 'testKey');
+
+                ok(typeof fetchedValue === 'string', 'Value is a string');
+                ok(fetchedValue === 'testVal', 'Value matches expected');
+            });
+
+            test("Attach object to element 2", function() {
+                var element = document.querySelector('.element2');
+                
+                elementDataStore.set(element, 'testKey', {
+                    testProperty: 'testVal'
+                });
+
+                var fetchedValue = elementDataStore.get(element, 'testKey');
+
+                ok(typeof fetchedValue === 'object', 'Value is a object');
+
+                ok(fetchedValue.testProperty === 'testVal', "Value retrived from stored object");
+            });
+        </script>
+    </body>
+</html>

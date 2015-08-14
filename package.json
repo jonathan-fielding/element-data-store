@@ -2,7 +2,7 @@
   "name": "element-data-store",
   "version": "0.0.1",
   "description": "Simple library that provides an api to stores data for an element (similar to $.data in jQuery)",
-  "main": "index.js",
+  "main": "src/element-data-store.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,5 +19,13 @@
   "bugs": {
     "url": "https://github.com/jonathan-fielding/element-data-store/issues"
   },
-  "homepage": "https://github.com/jonathan-fielding/element-data-store#readme"
+  "homepage": "https://github.com/jonathan-fielding/element-data-store#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-jshint": "^0.11.2",
+    "grunt-contrib-qunit": "^0.7.0",
+    "grunt-contrib-uglify": "^0.5.0",
+    "load-grunt-tasks": "^3.1.0"
+  }
 }
