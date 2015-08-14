@@ -17,7 +17,7 @@ To add data to an element use the `set` method, passing the element, a key and t
 
 elementDataStore.set(element, key, value);
 
-###F etch data for an element
+### Fetch data for an element
 
 To get data to an element use the `get` method, passing the element. The key is an optional parameter, passing it will get the value for the key, not passing the parameter will result in being returned all the data stored on the element.
 
