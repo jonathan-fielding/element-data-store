@@ -63,8 +63,6 @@
             return this.dict[elementId] || {};
         }
     };
-
-    return function () {
-        return (instance = (instance || new ElementDataStore()));
-    };
+    
+    return (instance = (instance || new ElementDataStore()));
 });
