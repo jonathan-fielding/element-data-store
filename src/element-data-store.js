@@ -1,16 +1,18 @@
-(function (window, document, undefined, factory) {
+(function (factory) {
   if (typeof define === 'function' && define.amd) {
     define(function() {
-        return factory(window, document, undefined);
+        return factory();
     });
   }
   else if (typeof exports === 'object') {
-    module.exports = factory;
+    module.exports = factory();
   }
   else {
-    window.elementDataStore = factory(window, document, undefined);
+    window.elementDataStore = factory();
   }
-})(window, document, undefined, function (window, document, undefined) {
+})(function () {
+    var instance;
+
     function ElementDataStore() {
         this.dict = {};
         this.uuid =  1;
@@ -62,5 +64,7 @@
         }
     };
 
-    return new ElementDataStore();
+    return function () {
+        return (instance = (instance || new ElementDataStore()));
+    };
 });
